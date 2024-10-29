@@ -1,4 +1,9 @@
-export const formdataMapper = <T>(data: FormData | T) => {
+/**
+ * Map a javascript object to FormData
+ * @param data The data to map
+ * @returns The object mapped as FormData
+ */
+export function formdataMapper<T>(data: FormData | T):FormData {
     if (data instanceof FormData) {
         let hasData = false;
         data.forEach(() => {
